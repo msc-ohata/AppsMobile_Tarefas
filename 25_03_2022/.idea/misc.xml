@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_07_04_2022/app/src/main/res/layout/activity_lista_personagens.xml" value="0.33" />
+        <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_07_04_2022/app/src/main/res/menu/activity_lista_personagem_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_07_04_2022/app/src/main/res/menu/activity_lista_personagem_menu_remover.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_2022_03_25/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.305" />
         <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_2022_03_25/app/src/main/res/drawable/ic_add_foreground.xml" value="0.305" />
         <entry key="..\:/Users/aluno/AndroidStudioProjects/Aula_2022_03_25/app/src/main/res/drawable/ic_add_personagem2_background.xml" value="0.305" />
