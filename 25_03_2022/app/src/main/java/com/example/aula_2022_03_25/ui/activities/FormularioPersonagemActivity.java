@@ -1,5 +1,7 @@
 package com.example.aula_2022_03_25.ui.activities;
 
+import static com.example.aula_2022_03_25.ui.activities.ConstatesActivities.CHAVE_PERSONAGEM;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -46,7 +48,7 @@ public class FormularioPersonagemActivity extends Activity {
         setContentView(R.layout.activity_formulario_personagens);
         inicializacaoCampos();
         carregaPersonagem();
-        checaPermissoes();
+        //checaPermissoes();
     }
 
     private void carregaPersonagem(){

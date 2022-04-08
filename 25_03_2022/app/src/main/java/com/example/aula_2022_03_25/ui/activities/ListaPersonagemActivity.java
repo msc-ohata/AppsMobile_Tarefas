@@ -1,5 +1,7 @@
 package com.example.aula_2022_03_25.ui.activities;
 
+import static com.example.aula_2022_03_25.ui.activities.ConstatesActivities.CHAVE_PERSONAGEM;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -75,7 +77,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item){
         int itemId = item.getItemId();
-        if(itemId == R.id.activity_lista_personagem_menu){
+        if(itemId == R.id.activity_lista_personagem_menu_remover){
             new AlertDialog.Builder(this)
                 .setTitle("Removendo Personagem")
                     .setMessage("Tem certeza que quer remover?")
@@ -103,7 +105,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
     private void configuraItemPorClique(ListView listaDePersonagem){
         listaDePersonagem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view,int posicao, long id) {
                 Personagem personagemEscolhido = (Personagem) adapterView.getItemAtPosition(posicao);
                 abreFormularioEditar(personagemEscolhido);
             }
