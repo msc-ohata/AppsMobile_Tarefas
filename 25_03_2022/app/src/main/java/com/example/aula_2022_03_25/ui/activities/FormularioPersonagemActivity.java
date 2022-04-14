@@ -14,8 +14,8 @@ import androidx.annotation.NonNull;
 import com.example.aula_2022_03_25.R;
 import com.example.aula_2022_03_25.dao.PersonagemDAO;
 import com.example.aula_2022_03_25.model.Personagem;
-import com.github.rtoshiro.util.format.SimpleMaskFormatter;
-import com.github.rtoshiro.util.format.text.MaskTextWatcher;
+/*import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;*/
 
 public class FormularioPersonagemActivity extends Activity {
 
@@ -27,12 +27,14 @@ public class FormularioPersonagemActivity extends Activity {
     private final PersonagemDAO dao = new PersonagemDAO();
     private Personagem personagem;
 
+    //Criar um balão flutuante para opções
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.activity_formulario_personagem_menu_salvar, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+    //Opções para o item selecionado
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
         int itemId  = item.getItemId();
@@ -42,6 +44,7 @@ public class FormularioPersonagemActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    //Ao entrar busca esse método
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -51,6 +54,7 @@ public class FormularioPersonagemActivity extends Activity {
         //checaPermissoes();
     }
 
+    //Método para carregar o personagem criado ou novo
     private void carregaPersonagem(){
         Intent dados = getIntent();
         if(dados.hasExtra(CHAVE_PERSONAGEM)){
@@ -64,12 +68,14 @@ public class FormularioPersonagemActivity extends Activity {
         }
     }
 
+    //Campos para o usuário preencher no formulário
     private void preencherCampos(){
         campoNome.setText(personagem.getNome());
         campoAltura.setText(personagem.getAltura());
         campoNascimento.setText(personagem.getNascimento());
     }
 
+    //Ao terminar de preencher o formulário
     private void finalizarFormulario(){
         preencherPersonagem();
         if(personagem.IdValido()){
@@ -81,19 +87,20 @@ public class FormularioPersonagemActivity extends Activity {
         }
         finish();
     }
-
+    
     private void inicializacaoCampos(){
         campoNome = findViewById(R.id.editText_nome);
         campoAltura = findViewById(R.id.editText_altura);
         campoNascimento = findViewById(R.id.editText_nascimento);
 
+        /*
         SimpleMaskFormatter smfAltura = new SimpleMaskFormatter("N,NN");
         MaskTextWatcher mtwAltura = new MaskTextWatcher(campoAltura, smfAltura);
         campoAltura.addTextChangedListener(mtwAltura);
 
         SimpleMaskFormatter smfNascimento = new SimpleMaskFormatter("NN/NN/NNNN");
         MaskTextWatcher mtwNascimento = new MaskTextWatcher(campoNascimento, smfNascimento);
-        campoNascimento.addTextChangedListener(mtwNascimento);
+        campoNascimento.addTextChangedListener(mtwNascimento);*/
     }
 
     private void preencherPersonagem(){

@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:ems="10"
-            android:hint="Nascimento"
+            android:hint="Nascimento (00/00/0000)"
             android:inputType="date"
             tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
