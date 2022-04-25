@@ -60,7 +60,8 @@ public class FormularioPersonagemActivity extends Activity {
         if(dados.hasExtra(CHAVE_PERSONAGEM)){
             setTitle(TITULO_APPBAR_EDITA_PERSONAGEM);
             personagem = (Personagem) dados.getSerializableExtra(CHAVE_PERSONAGEM);
-            preencherCampos();
+            preencheCampos();
+            //preencherCampos();
         }
         else{
             setTitle(TITULO_APPBAR_NOVO_PERSONAGEM);
@@ -69,7 +70,8 @@ public class FormularioPersonagemActivity extends Activity {
     }
 
     //Campos para o usuário preencher no formulário
-    private void preencherCampos(){
+    //private void preencherCampos(){
+    private void preencheCampos(){
         campoNome.setText(personagem.getNome());
         campoAltura.setText(personagem.getAltura());
         campoNascimento.setText(personagem.getNascimento());
